@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import PostService, { IPost } from "../../services/post-service";
-import "./MyPostsPage.css"; // Make sure to create this CSS file
+import PostService, { IPost } from "../../../services/DrComputer/post-service";
+import "./MyPostsPage.css";
 import { AxiosResponse } from "axios";
 
 function MyPostsPage() {
@@ -35,7 +35,7 @@ function MyPostsPage() {
 
   const handleEdit = (post: IPost) => {
     // Navigate to the edit post page with state
-    navigate('/Post/Edit', { state: { post } });
+    navigate('/drComputerApp/Post/Edit', { state: { post } });
   };
 
   const handleDelete = async (postId: string) => {

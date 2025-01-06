@@ -1,11 +1,11 @@
 import React, { ChangeEvent, useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./EditPostPage.css";
-import PostService, { IPost } from "../../services/post-service";
+import PostService, { IPost } from "../../../services/DrComputer/post-service";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
-import { uploadPhoto } from "../../services/file-service";
-import emptyImage from '/assets/empty_image.jpg'
+import { uploadPhoto } from "../../../services/DrComputer/file-service";
+import emptyImage from '../../../assets/drcomputer/empty_image.jpg'
 function EditPostPage() {
   const [imgSrc, setImgSrc] = useState<File | null>(null)
   let myImage: string = "";
@@ -122,7 +122,7 @@ const deleteImg = () => {
         try {
           const res = await PostService.update(editedPost, '?postId=');
           cancelRef.current = res.cancel;
-          navigate("/Profile/MyPosts");
+          navigate("/drComputerApp/Profile/MyPosts");
         } catch (error) {
           console.error("Error updating post:", error);
           setError("An error occurred while updating the post.");

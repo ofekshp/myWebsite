@@ -10,7 +10,7 @@ const HomePage = () => {
       <h1>Welcome to the Home Page</h1>
       <div className="button-container">
         <button onClick={() => navigate('/weatherApp')}>Go to Weather App</button>
-        <button onClick={() => navigate('/drComputer')}>Go to DrComputer</button>
+        <button onClick={() => navigate('/drComputerApp')}>Go to DrComputer</button>
         <button onClick={() => navigate('/somewhere3')}>Go to Website 3</button>
       </div>
     </div>

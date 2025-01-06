@@ -1,9 +1,9 @@
 
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
-import UserService from "../../services/user-service";
+import UserService from "../../../services/DrComputer/user-service";
 import './HomePage.css';
-import image from '/assets/logo.png'; // Correctly importing the image
+import image from '../../../assets/drcomputer/logo.png'; // Correctly importing the image
 
 function HomePage() {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ function HomePage() {
       .then(() => {
         setIsLoading(false);
         console.log("Logout success");
-        navigate('/');
+        navigate('/drComputerApp/Home');
       })
       .catch((error) => {
         console.log(error);
@@ -32,10 +32,10 @@ function HomePage() {
       </div>
       <h1>Home Page</h1>
       <div className="button-container">
-        <button className="postBTN myButton" onClick={() => navigate('/Post')}>Post</button>
-        <button className="feedBTN myButton" onClick={() => navigate('/Feed')}>Feed</button>
-        <button className="profileBTN myButton" onClick={() => navigate('/Profile')}>Profile</button>
-        <button className="articleBTN myButton" onClick={() => navigate('/Article')}>Articles</button>
+        <button className="postBTN myButton" onClick={() => navigate('/drComputerApp/Post')}>Post</button>
+        <button className="feedBTN myButton" onClick={() => navigate('/drComputerApp/Feed')}>Feed</button>
+        <button className="profileBTN myButton" onClick={() => navigate('/drComputerApp/Profile')}>Profile</button>
+        <button className="articleBTN myButton" onClick={() => navigate('/drComputerApp/Article')}>Articles</button>
         <button className="logoutBTN" onClick={async () => await logoutFunction()}>LogOut</button>
       </div>
       <div>

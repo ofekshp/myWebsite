@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import './StartPage.css';
-import image from '/assets/logo.png';
+import image from '../../../assets/drcomputer/logo.png';
 function StartPage() {
   const logo=image
   const navigate = useNavigate();
@@ -12,8 +12,8 @@ function StartPage() {
       </div>
       <h1>Welcome !</h1>
       <div className="button-container">
-        <button className="nav-button" onClick={() => navigate('/Login')}>Login</button>
-        <button className="nav-button" onClick={() => navigate('/Register')}>Register</button>
+        <button className="nav-button" onClick={() => navigate('/drComputerApp/Login')}>Login</button>
+        <button className="nav-button" onClick={() => navigate('/drComputerApp/Register')}>Register</button>
       </div>
     </div>
   );

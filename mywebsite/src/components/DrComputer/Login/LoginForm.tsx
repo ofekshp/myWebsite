@@ -3,11 +3,11 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import "./LoginForm.css"; // Import your CSS file
-import UserService, { IloginUser } from "../../services/user-service";
+import UserService, { IloginUser } from "../../../services/DrComputer/user-service";
 import { CanceledError } from "axios";
 import { useNavigate } from 'react-router-dom';
 import {GoogleLogin, CredentialResponse } from '@react-oauth/google';
-import logoimp from '/assets/logo.png';
+import logoimp from '../../../assets/drcomputer/logo.png';
 
 const schema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
@@ -36,7 +36,7 @@ function LoginForm() {
       .then(() => {
         setIsLoading(false);
         console.log("login success");
-        navigate('/Feed');
+        navigate('/drComputerApp/Feed');
       })
       .catch((error) => {
         if (error instanceof CanceledError) return;
@@ -56,7 +56,7 @@ function LoginForm() {
         localStorage.setItem('accessToken',(decodeRes).accessToken)
         localStorage.setItem('refreshToken', (decodeRes).refreshToken)
       }
-      navigate('/Feed');
+      navigate('/drComputerApp/Feed');
     } catch (error) {
       console.log("Failed to sign in with Google, please try again later.");
     }

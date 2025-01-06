@@ -1,12 +1,12 @@
 import React, { ChangeEvent, useRef, useState } from "react";
 import axios, { CanceledError } from "axios";
 import "./PostPage.css";
-import PostService from "../../services/post-service";
+import PostService from "../../../services/DrComputer/post-service";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
-import { uploadPhoto } from "../../services/file-service";
-import emptyImage from '/assets/empty_image.jpg'
+import { uploadPhoto } from "../../../services/DrComputer/file-service";
+import emptyImage from '../../../assets/drcomputer/empty_image.jpg'
 function PostPage() {
    const img=emptyImage
    const [imgSrc, setImgSrc] = useState<File>()
@@ -106,7 +106,7 @@ function PostPage() {
         console.log("Upload Successful:", req.data);
         setMessage("Upload Successful!");
         setError("");
-        navigate("/Feed");
+        navigate("/drComputerApp/Feed");
       } catch (error: unknown) {
         if (axios.isAxiosError(error) && (error instanceof CanceledError||axios.isCancel(error))) {
           console.log("CANCELTA OTANU");

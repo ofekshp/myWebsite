@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { AxiosResponse } from 'axios';
 import './CommentsPage.css'; // Ensure this file is created and properly styled
-import PostCommentService, { IPostComment } from '../../services/comment-service';
+import PostCommentService, { IPostComment } from '../../../services/DrComputer/comment-service';
 
 function CommentsPage() {
   const [searchParams] = useSearchParams();

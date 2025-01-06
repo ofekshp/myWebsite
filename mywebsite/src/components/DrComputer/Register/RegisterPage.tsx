@@ -1,14 +1,15 @@
 import React, { ChangeEvent, useRef, useState } from "react";
 import axios, { CanceledError } from "axios";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./RegisterPage.css";
-import UserService from "../../services/user-service";
+import UserService from "../../../services/DrComputer/user-service";
 import { useNavigate } from "react-router-dom";
-import { uploadPhoto } from "../../services/file-service";
+import { uploadPhoto } from "../../../services/DrComputer/file-service";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
-import logoimp from "/assets/logo.png";
-import avatar from "/assets/avatar.jpg";
+import logoimp from "../../../assets/drcomputer/logo.png";
+import avatar from "../../../assets/drcomputer/avatar.jpg";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function RegisterPage() {
   const img = avatar;
   const logo = logoimp;
@@ -93,7 +94,7 @@ function RegisterPage() {
         console.log("Login Successful:", loginResponse);
         setMessage("Registration Successful!");
         setError("");
-        navigate("/Feed");
+        navigate("/drComputerApp/Feed");
       } catch (error) {
         if (axios.isAxiosError(error) && error instanceof CanceledError) return;
         console.error("Registration Error:", error);

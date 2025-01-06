@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import "./ProfilePage.css";
-import UserService, { IProfile} from "../../services/user-service";
+import UserService, { IProfile} from "../../../services/DrComputer/user-service";
 import { useNavigate } from "react-router-dom";
 
 function ProfilePage() {
@@ -55,7 +54,7 @@ function ProfilePage() {
             </div>
           </div>
           {error && <div className="alert alert-danger alert-dismissible fade show">{error}</div>}
-          <button className="editProfileBTN myButton" onClick={()=>navigate('/Profile/EditProfile')}>Edit Profile</button>
+          <button className="editProfileBTN myButton" onClick={()=>navigate('/drComputerApp/Profile/EditProfile')}>Edit Profile</button>
         </div>
       )}
     </div>

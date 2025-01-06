@@ -1,12 +1,11 @@
 import { useState, useEffect, ChangeEvent, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import "./EditProfilePage.css";
-import UserService, { IProfile } from "../../services/user-service";
+import UserService, { IProfile } from "../../../services/DrComputer/user-service";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
-import { uploadPhoto } from "../../services/file-service";
-import avatar from '/assets/avatar.jpg';
+import { uploadPhoto } from "../../../services/DrComputer/file-service";
+import avatar from '../../../assets/drcomputer/avatar.jpg';
 function EditProfilePage() {
   const [imgSrc, setImgSrc] = useState<File | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -60,7 +59,7 @@ function EditProfilePage() {
       const userService: UserService = new UserService();
       await userService.updateUserProfile(profile, password); // Assume there's a method to update profile
       setError("");
-      navigate('/Profile'); // Redirect to the profile page after saving
+      navigate('/drComputerApp/Profile'); // Redirect to the profile page after saving
     } catch (error: unknown) {
       console.error("Update Error:", error);
       setError("An error occurred while updating the profile. Please try again later.");
@@ -70,7 +69,7 @@ function EditProfilePage() {
   };
 
   const handleCancel = () => {
-    navigate('/Profile'); // Redirect to the profile page without saving
+    navigate('/drComputerApp/Profile'); // Redirect to the profile page without saving
   };
 
   const imgSelected = (e: ChangeEvent<HTMLInputElement>) => {
