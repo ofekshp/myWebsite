@@ -25,8 +25,8 @@ jobs:
         run: |
           npm init -y
           npm install
-          npm run dev 
-          # npm run build --if-present
+          #npm run dev 
+          npm run build --if-present
           # npm run test --if-present
 
       - name: Zip artifact for deployment
