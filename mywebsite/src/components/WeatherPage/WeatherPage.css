@@ -6,8 +6,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 70px 20px 20px;
+  margin-top: 50px;
 }
-.search-bar{
+.search-bar{ 
   display: flex;
   align-items: center;
   gap: 12px;

@@ -14,7 +14,6 @@ import DrComputerEditPostPage from './components/DrComputer/EditPost/EditPostPag
 import DrComputerMyPostsPage from './components/DrComputer/MyPosts/MyPostsPage.tsx'
 import DrComputerEditProfilePage from './components/DrComputer/EditProfile/EditProfilePage.tsx'
 
-
 function AppContent() {
   return (
     <div className='app'>

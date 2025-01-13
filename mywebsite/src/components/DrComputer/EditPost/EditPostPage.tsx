@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
 import { uploadPhoto } from "../../../services/DrComputer/file-service";
 import emptyImage from '../../../assets/drcomputer/empty_image.jpg'
+import NavBarMain from "../../NavBar/NavBar";
+
 function EditPostPage() {
   const [imgSrc, setImgSrc] = useState<File | null>(null)
   let myImage: string = "";
@@ -143,6 +145,7 @@ const deleteImg = () => {
 
   return (
     <div className="edit-post-page">
+      <NavBarMain />
       <h1>Edit Post</h1>
       <form className="edit-post-form" onSubmit={handleSubmit}>
         {fields.map((field) => (

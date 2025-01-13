@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { AxiosResponse } from 'axios';
 import './CommentsPage.css'; // Ensure this file is created and properly styled
 import PostCommentService, { IPostComment } from '../../../services/DrComputer/comment-service';
+import NavBarMain from '../../NavBar/NavBar';
 
 function CommentsPage() {
   const [searchParams] = useSearchParams();
@@ -59,6 +60,7 @@ function CommentsPage() {
 
   return (
     <div className="comments-page">
+      <NavBarMain />
       <div className="comments-section">
         {isLoading ? (
           <div className="spinner-border text-primary" />

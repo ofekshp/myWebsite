@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./ProfilePage.css";
 import UserService, { IProfile} from "../../../services/DrComputer/user-service";
 import { useNavigate } from "react-router-dom";
+import NavBarMain from "../../NavBar/NavBar";
 
 function ProfilePage() {
   const navigate = useNavigate();
@@ -35,6 +36,7 @@ function ProfilePage() {
 
   return (
     <div className="profile-page">
+      <NavBarMain />
       <div className="profile-header">
         <h1>Profile</h1>
       </div>

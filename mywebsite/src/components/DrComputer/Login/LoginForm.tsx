@@ -8,6 +8,7 @@ import { CanceledError } from "axios";
 import { useNavigate } from 'react-router-dom';
 import {GoogleLogin, CredentialResponse } from '@react-oauth/google';
 import logoimp from '../../../assets/drcomputer/logo.png';
+import NavBarMain from "../../NavBar/NavBar";
 
 const schema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
@@ -69,6 +70,7 @@ function LoginForm() {
 
   return (
     <div className="form-container">
+      <NavBarMain />
       <div className="logo-container">
         <img src={logo} alt="Logo" />
       </div>

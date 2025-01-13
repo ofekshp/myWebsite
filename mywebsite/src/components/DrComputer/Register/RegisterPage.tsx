@@ -9,6 +9,7 @@ import { faImage } from "@fortawesome/free-solid-svg-icons";
 import logoimp from "../../../assets/drcomputer/logo.png";
 import avatar from "../../../assets/drcomputer/avatar.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
+import NavBarMain from "../../NavBar/NavBar";
 
 function RegisterPage() {
   const img = avatar;
@@ -110,6 +111,7 @@ function RegisterPage() {
 
   return (
     <div className="register-page">
+      <NavBarMain />
       <div className="logo-container">
         <img src={logo} alt="Logo" />
       </div>

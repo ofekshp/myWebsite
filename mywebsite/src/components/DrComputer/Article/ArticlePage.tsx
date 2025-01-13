@@ -2,6 +2,7 @@ import axios, { AxiosError, AxiosResponse, CanceledError } from "axios";
 import { Article, Data, getData } from "../../../services/DrComputer/news-service";
 import "./ArticlePage.css"
 import { useEffect, useState } from "react";
+import NavBarMain from '../../NavBar/NavBar';
 
 function ArticlePage() {
     const [isLoading,setIsLoading]=useState(false)
@@ -41,6 +42,8 @@ function ArticlePage() {
 
   return (
     <div className="news-page">
+      <NavBarMain />
+      
       <h1>All news</h1>
       {isLoading ? (
         <div className="spinner-border text-primary" />
@@ -64,6 +67,7 @@ function ArticlePage() {
     </div>
   );
 }
+import NavBar from "../NavBar/NavBarPage";
   export default ArticlePage
 
 

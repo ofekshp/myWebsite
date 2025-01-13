@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
 import { uploadPhoto } from "../../../services/DrComputer/file-service";
 import avatar from '../../../assets/drcomputer/avatar.jpg';
+import NavBarMain from "../../NavBar/NavBar";
+
 function EditProfilePage() {
   const [imgSrc, setImgSrc] = useState<File | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -91,6 +93,7 @@ function EditProfilePage() {
   }
   return (
     <div className="edit-profile-page">
+      <NavBarMain />
       <div className="profile-header">
         <h1>Edit Profile</h1>
       </div>

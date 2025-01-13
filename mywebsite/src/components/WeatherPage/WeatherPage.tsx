@@ -9,6 +9,7 @@ import snow from '../../assets/weather/snow.png'
 import drizzle from '../../assets/weather/drizzle.png'
 import { getWeatherData } from "../../services/weather/weatherAPI";
 import { useState } from 'react';
+import NavBar from '../NavBar/NavBar';
 
 interface WeatherData {
   location: string;
@@ -68,6 +69,9 @@ const WeatherPage = () => {
 
   return (
     <div className='weather'>
+      <div className="navbar">
+      <NavBar />
+      </div>
       <div className="search-bar">
         <input type="text" placeholder="Search..." value={city} onChange={(e) => setCity(e.target.value)} />
         <IoIosSearch className='search-icon' onClick={searchInfo}/>

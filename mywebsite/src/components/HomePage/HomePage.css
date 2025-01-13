@@ -1,27 +1,65 @@
+/* HomePage.css */
+
+/* General Page Styling */
 .homepage {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  
-  button {
-    padding: 15px 30px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 70px 20px 20px;
+  font-family: 'Arial', sans-serif;
+  color: #000000;
+  margin-top: 50px;
+}
+
+/* Header Styling */
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* About Section Styling */
+.about {
+  max-width: 600px;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555252;
+  background-color: rgba(51, 40, 40, 0.1);
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons Section Styling */
+.button-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.button-container button {
+  background-color: #0984e3;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #74b9ff;
+  transform: scale(1.1);
+}

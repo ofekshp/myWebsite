@@ -1,5 +1,5 @@
-
 import { useNavigate } from 'react-router-dom';
+import NavBarMain from '../NavBar/NavBar.tsx';
 import './HomePage.css';
 
 const HomePage = () => {
@@ -7,7 +7,20 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
-      <h1>Welcome to the Home Page</h1>
+      <NavBarMain />
+  
+      <header className="header">
+        <h1>Ofek Shpirer</h1>
+      </header>
+
+      <section className="about">
+        <p>
+          Hi, I'm Ofek Shpirer, a passionate software developer with experience in building 
+          web applications using modern technologies. I love solving complex problems, learning new skills, 
+          and working on innovative projects.
+        </p>
+      </section>
+
       <div className="button-container">
         <button onClick={() => navigate('/weatherApp')}>Go to Weather App</button>
         <button onClick={() => navigate('/drComputerApp')}>Go to DrComputer</button>

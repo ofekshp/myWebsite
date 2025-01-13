@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import PostService, { IPost } from "../../../services/DrComputer/post-service";
 import "./MyPostsPage.css";
 import { AxiosResponse } from "axios";
+import NavBarMain from "../../NavBar/NavBar";
 
 function MyPostsPage() {
   
@@ -54,6 +55,7 @@ function MyPostsPage() {
 
   return (
     <div className="my-posts-page">
+      <NavBarMain />
       <h1>My Posts</h1>
       <div className="posts-list">
         {posts?.length === 0 ? (

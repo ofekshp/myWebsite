@@ -1,12 +1,15 @@
 import { useNavigate } from 'react-router-dom';
 import './StartPage.css';
 import image from '../../../assets/drcomputer/logo.png';
+import NavBarMain from '../../NavBar/NavBar.tsx';
+
 function StartPage() {
   const logo=image
   const navigate = useNavigate();
 
   return (
     <div className="home-container">
+      <NavBarMain />
       <div className="logo-container">
         <img src={logo} alt="Logo" />
       </div>

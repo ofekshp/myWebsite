@@ -1,9 +1,9 @@
-
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import UserService from "../../../services/DrComputer/user-service";
 import './HomePage.css';
 import image from '../../../assets/drcomputer/logo.png'; // Correctly importing the image
+import NavBarMain from '../../NavBar/NavBar';
 
 function HomePage() {
   const navigate = useNavigate();
@@ -27,6 +27,7 @@ function HomePage() {
 
   return (
     <div className="home-container">
+      <NavBarMain />
       <div className="logo-container">
         <img src={image} alt="Logo" /> {/* Referencing the imported image */}
       </div>

@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
 import { uploadPhoto } from "../../../services/DrComputer/file-service";
 import emptyImage from '../../../assets/drcomputer/empty_image.jpg'
+import NavBarMain from "../../NavBar/NavBar";
+
 function PostPage() {
    const img=emptyImage
    const [imgSrc, setImgSrc] = useState<File>()
@@ -133,6 +135,7 @@ function PostPage() {
 
   return (
     <div className="post-page">
+      <NavBarMain />
       <div className="post-form-container">
         <h1>Post Your Setup</h1>
         <form className="form-group" onSubmit={onSubmit}>

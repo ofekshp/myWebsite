@@ -3,6 +3,7 @@ import PostService, { IPost } from "../../../services/DrComputer/post-service"; 
 import axios, { AxiosResponse } from "axios";
 import "./FeedPage.css";
 import { useNavigate } from "react-router-dom";
+import NavBarMain from "../../NavBar/NavBar";
 
 function FeedPage() {
   const navigate = useNavigate();
@@ -42,6 +43,7 @@ function FeedPage() {
 
   return (
     <div className="feed-page">
+      <NavBarMain />
       <h1>All Posts</h1>
       {isLoading ? (
         <div className="spinner-border text-primary" />

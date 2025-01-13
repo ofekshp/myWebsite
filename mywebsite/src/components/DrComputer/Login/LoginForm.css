@@ -9,6 +9,7 @@
 
 .logo-container {
   display: flex;
+  margin-top: 50px;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px; /* Adjust the margin as needed */
