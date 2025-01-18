@@ -67,8 +67,7 @@ function ArticlePage() {
     </div>
   );
 }
-import NavBar from "../NavBar/NavBarPage";
-  export default ArticlePage
+export default ArticlePage
 
 
 

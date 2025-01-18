@@ -8,18 +8,19 @@ const HomePage = () => {
   return (
     <div className="homepage">
       <NavBarMain />
-  
-      <header className="header">
-        <h1>Ofek Shpirer</h1>
-      </header>
 
-      <section className="about">
+      <div className="header">
+        <h1>Ofek Shpirer</h1>
+        <h2>The Website still in progress...(He is new)</h2>
+      </div>
+      
+      <div className="about">
         <p>
           Hi, I'm Ofek Shpirer, a passionate software developer with experience in building 
           web applications using modern technologies. I love solving complex problems, learning new skills, 
           and working on innovative projects.
         </p>
-      </section>
+      </div>
 
       <div className="button-container">
         <button onClick={() => navigate('/weatherApp')}>Go to Weather App</button>
