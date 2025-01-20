@@ -50,7 +50,6 @@ function LoginForm() {
 
   const onSuccess = async (credentialResponse: CredentialResponse) => {
     try {
-      console.log(credentialResponse);
       if(credentialResponse.credential){
       const userService=new UserService()
       const decodeRes=await userService.jwtAuthentication(credentialResponse)

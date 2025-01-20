@@ -32,7 +32,6 @@ function AppContent() {
           <Route path="/drComputerApp/Post/Edit" element={<DrComputerEditPostPage />} />
           <Route path="/drComputerApp/Profile/MyPosts" element={<DrComputerMyPostsPage />} />
           <Route path="/drComputerApp/Profile/EditProfile" element={<DrComputerEditProfilePage />} />
-          
     </Routes>
     </div>
   )
